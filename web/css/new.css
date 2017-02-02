@@ -1,0 +1,23 @@
+body{
+	background-color:#E0DEDD;
+}
+img{
+	width: 100px;
+}
+
+.nombre{
+	color:green;
+	font-weight: bold;
+}
+.creacion{
+	font-weight: bold;
+}
+.fondo{
+	background-color: #5ABDCE;
+	color:white;
+	font-weight:bold;
+}
+.fondoBtn{
+	background-color:#426BBD;
+	color:white;
+}

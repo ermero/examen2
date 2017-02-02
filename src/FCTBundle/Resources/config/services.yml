@@ -1,0 +1,4 @@
+services:
+#    fct.example:
+#        class: FCTBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

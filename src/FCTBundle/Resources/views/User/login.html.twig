@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+{% block title %}Login FCT{% endblock %}
+{% block stylesheets %}
+<link href="{{ asset('/css/style.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block body %}
+{% if error %}
+	<div>{{ error.messagekey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+	<form action="{{ path('FCT_login') }}" name="login" method="POST">
+		<label>User</label> 
+		<input type="text" name="_username" value="{{ ultimo_usuario }}"/>
+		<label>Password</label>
+		<input type="password" name="_password">
+		<input type="submit" name="login" value="autenticacion">
+	</form>
+{% endblock %}

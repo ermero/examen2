@@ -1,0 +1,39 @@
+FCT_homepage:
+    path:     /
+    defaults: { _controller: FCTBundle:Default:index }
+FCT_admin:
+    path:     /admin
+    defaults: { _controller: FCTBundle:Default:admin }
+FCT_empresa_new:
+    path:     /empresa/new
+    defaults: { _controller: FCTBundle:Empresa:new }
+FCT_empresa_all:
+    path:     /empresa/all
+    defaults: { _controller: FCTBundle:Empresa:all }
+FCT_alumno_all: 
+    path:     /alumno/all
+    defaults: { _controller: FCTBundle:Alumno:all }
+FCT_registro:
+    path:   /user/register
+    defaults: { _controller: FCTBundle:User:register}
+FCT_login:
+    path:   /user/login
+    defaults: { _controller: FCTBundle:User:login}
+FCT_user:
+    path:   /user
+    defaults: { _controller: FCTBundle:User:user}
+FCT_config_maestro:
+    path:   /maestro/configuracion
+    defaults: { _controller: FCTBundle:Configuracion:configuracion}
+FCT_config_registro:
+    path:   /maestro/registro
+    defaults: { _controller: FCTBundle:Conf:registro}
+FCT_empresas_POST:
+    path:     /api/empresas
+    defaults: { _controller: FCTBundle:Api:post }
+    methods: [POST]
+FCT_empresas_GET:
+    path:     /api/empresas
+    defaults: { _controller: FCTBundle:Api:get }
+    methods: [GET]
+

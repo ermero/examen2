@@ -1,0 +1,20 @@
+{% extends "::base.html.twig" %}
+{% block title %}Alumno FCT{% endblock %}
+{% block stylesheets %}
+<link href="{{ asset('/css/style.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<table border="1px">
+	<tr class="principal">
+		<td>Parametro</td>
+		<td>Configuracion</td>
+	</tr>
+	{% for maestro in maestros %}
+			<tr>
+				<td>{{maestro.param}}</td>
+				<td>{{maestro.configuracion}}</td>
+			</tr>
+	{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "::base.html.twig" %}
+{% block title %}Alumno FCT{% endblock %}
+{% block stylesheets %}
+<link href="{{ asset('/css/style.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block menu %}
+	<ul>
+		<li>Alta empresa</li>
+		<li>Ver empresa</li>
+		<li>ver alumnos</li>
+	</ul>
+{% endblock %}
+{% block body %}
+<img src="{{asset("images/fct.gif")}}">
+<table border="1px">
+	<tr class="principal">
+		<td>Nombre</td>
+		<td>Apellido1</td>
+		<td>Apellido2</td>
+		<td>Ciclo</td>
+		<td>Nombre Empresa</td>
+	</tr>
+	{% for alumno in alumnos %}
+			<tr>
+				<td>{{alumno.nombre}}</td>
+				<td>{{alumno.apellido1}}</td>
+				<td>{{alumno.apellido2}}</td>
+				<td>{{alumno.ciclo}}</td>
+				<td>{{alumno.empresa.nombre}}</td>
+			</tr>
+	{% endfor %}
+</table>
+{% endblock %}

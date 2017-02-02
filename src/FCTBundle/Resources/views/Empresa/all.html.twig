@@ -1,0 +1,28 @@
+{% extends "::base.html.twig" %}
+{% block title %}Empresa FCT{% endblock %}
+{% block stylesheets %}
+<link href="{{ asset('/css/style.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block body %}
+<img src="{{asset("images/fct.gif")}}">
+<table border="1px">
+	<tr class="principal">
+		<td>Nombre</td>
+		<td>Direccion</td>
+		<td>CP</td>
+		<td>Telefono1</td>
+		<td>Telefono2</td>
+		<td>Fecha de Creación</td>
+	</tr>
+	{% for empresa in empresas %}
+			<tr>
+				<td>{{empresa.nombre}}</td>
+				<td>{{empresa.direccion}}</td>
+				<td>{{empresa.cp}}</td>
+				<td>{{empresa.telefono1}}</td>
+				<td>{{empresa.telefono2}}</td>
+				<td>{{empresa.fechaCreacion|date('Y-m-d')}}</td>
+			</tr>
+	{% endfor %}
+</table>
+{% endblock %}
